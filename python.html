@@ -1,10 +1,11 @@
 ---
 layout: page
-description: "Just A Blog To Record Life"
-weight: 1
+title: "PYTHON"
+description: "Life is short, you need Python"
+header-img: "img/about-bg.jpg"
 ---
 
-<!-- {% for post in paginator.posts %}
+{% for post in site.categories.['Python'] %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -18,10 +19,10 @@ weight: 1
     <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
-{% endfor %} -->
+{% endfor %}
 
-<!-- Pager
-{% if paginator.total_pages > 1 %}
+<!-- Pager -->
+<!-- {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">

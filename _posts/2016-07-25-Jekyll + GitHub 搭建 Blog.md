@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Jekyll + GitHub = Blog
+category: Linux 
 ---
 
 # Jekyll + GitHub 搭建 Blog
