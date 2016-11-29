@@ -132,6 +132,7 @@ SocketStream类提供两种实例化方式，____init____方法接受socket参�
 MAX_IO_CHUNK: socket buffer有大小限制，分隔large data到多次recv or send 操作.
 
 BYTES_LITERAL用于将收到的byte转化成utf8格式。
+
 ```python
 def BYTES_LITERAL(text):
     return bytes(text, "utf8")
