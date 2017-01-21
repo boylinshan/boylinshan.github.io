@@ -25,7 +25,7 @@ The first line of input contains two integers **N** and  **K** separated by a sp
 The next  **N** lines contain the entries of the triangle. Specifically, the $$\imath$$ th following line contains  $\imath$ integers, denoting the entries in the $\imath$ th row of the triangle.
 
 #### Constraints
-- $$ 1 \leq N \leq 350 $$
+- $$1 \leq N \leq 350$$
 - $-10^5 \leq triangle \; entries \leq 10^5$
 - $K \geq 1$
 
