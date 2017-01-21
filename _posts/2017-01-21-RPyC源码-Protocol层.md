@@ -18,6 +18,7 @@ class Connection(object):
 ```
 
 Connection类提供了接收请求的方法，分为serve和poll两种。
+
 ```python
 	def serve(self, timeout = 1):
 		data = self._recv(timeout, wait_for_lock = True)
@@ -33,7 +34,9 @@ Connection类提供了接收请求的方法，分为serve和poll两种。
         self._dispatch(data)
         return True
 ```
+
 Connection类也提供了发送请求的方法，分为同步和异步两种。
+
 ```python
 	def sync_request(self, handler, *args):
         """Sends a synchronous request (waits for the reply to arrive)
@@ -80,9 +83,11 @@ Connection类也提供了发送请求的方法，分为同步和异步两种。
             res.set_expiry(timeout)
         return res
 ```
+
 同步和异步请求的区别在于，发送一个sync_request后，需要等待结果返回或者timeout。而发送一个async_request后，函数则直接返回一个AsyncResult对象，AsyncResult对象在取value值时，会调用connection的server方法，获取网络传输过来的数据，也即时对于异步而言，最明显的区别在于，数据在网络中传输的这段时间程序可以继续执行别的工作。
 
 Connection类还负责创建远程对象代理的工作，使得上层在访问的远程对象时，就像在使用本地对象一样。创建和解析对象的方法为_box和_unbox两个
+
 ```python
 	def _box(self, obj):
         """store a local object in such a way that it could be recreated on
@@ -124,6 +129,7 @@ Connection类还负责创建远程对象代理的工作，使得上层在访问�
             return proxy
         raise ValueError("invalid label %r" % (label,))
 ```
+
 在box和unbox中，将对象分为四种VALUE, TUPLE, REMOTE_REF以及LOCAL_REF。
 VALUE:值传递的对象，因此直接去传递过来的数据即可。
 TUPLE:循环解析里面的数据类型。
