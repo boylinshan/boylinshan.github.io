@@ -18,18 +18,18 @@ The "sum of a subtriangle" is defined as the sum of all the elements it contains
 
 Given **K**, find the **K** smallest possible subtriangle sums. Consider all subtriangles distinct, even though some of them may have the same sums.
 
-####Input Format
+#### Input Format
 
 The first line of input contains two integers **N** and  **K** separated by a space.
 
-The next  **N** lines contain the entries of the triangle. Specifically, the $\imath$th following line contains  $\imath$ integers, denoting the entries in the $\imath$th row of the triangle.
+The next  **N** lines contain the entries of the triangle. Specifically, the $\imath$ th following line contains  $\imath$ integers, denoting the entries in the $\imath$ th row of the triangle.
 
 #### Constraints
 - $1 \leq N \leq 350$
 - $-10^5 \leq triangle \; entries \leq 10^5$
 - $K \geq 1$
 
-####Output Format
+#### Output Format
 Output **K** lines. The $\imath$th line contains the $\imath$th smallest subtriangle sum.
 
 #### Sample Input
