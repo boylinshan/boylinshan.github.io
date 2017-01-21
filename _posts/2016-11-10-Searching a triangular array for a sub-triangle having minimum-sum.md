@@ -1,7 +1,7 @@
 ---
 layout: post
 title: " Searching a triangular array for a sub-triangle having minimum-sum"
-category: C++
+category: 	
 ---
 
 # Searching a triangular array for a sub-triangle having minimum-sum
@@ -24,7 +24,7 @@ The first line of input contains two integers **N** and  **K** separated by a sp
 
 The next  **N** lines contain the entries of the triangle. Specifically, the $\imath$th following line contains  $\imath$ integers, denoting the entries in the $\imath$th row of the triangle.
 
-####Constraints
+#### Constraints
 - $1 \leq N \leq 350$
 - $-10^5 \leq triangle \; entries \leq 10^5$
 - $K \geq 1$
@@ -32,7 +32,7 @@ The next  **N** lines contain the entries of the triangle. Specifically, the $\i
 ####Output Format
 Output **K** lines. The $\imath$th line contains the $\imath$th smallest subtriangle sum.
 
-####Sample Input
+#### Sample Input
 ```
 6 5
 15
@@ -43,7 +43,7 @@ Output **K** lines. The $\imath$th line contains the $\imath$th smallest subtria
 -16 31 2 9 28 3
 ```
 
-####Sample Output
+#### Sample Output
 
 ```
 -42
@@ -53,7 +53,7 @@ Output **K** lines. The $\imath$th line contains the $\imath$th smallest subtria
 -25
 ```
 
-####Solution
+#### Solution
 ```cpp
 void heapify(vector<int> &vec, int pos, int n) {
 	int largest = pos;
@@ -111,6 +111,7 @@ vector<int> Solution(vector<vector<int>> &matrix, int K) {
 	return result;
 }
 ```
+
 最直接的解法，求出所有三角行的合，再选出最小的**K**个。
 求合时，考虑到对于以 $a_{i,j}$为顶点，高度为**n**的三角形而言，可由分别以 $a_{i+1,} \ a_{i+1,j+i} \ a_{i+2,j+2}$为顶点，高度为**n-1, n-1, n-2**的三角形求出，即以 $a_{i,j}$为顶点的棱形的4个顶点。所以可以采用动态规划的方法，从最低端开始，减少重复的计算。
 
