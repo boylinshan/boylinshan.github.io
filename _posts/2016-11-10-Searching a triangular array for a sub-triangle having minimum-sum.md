@@ -1,7 +1,7 @@
 ---
 layout: post
-title: " Searching a triangular array for a sub-triangle having minimum-sum"
-category: 	
+title: "Searching a triangular array for a sub-triangle having minimum-sum"
+category: C++
 ---
 
 # Searching a triangular array for a sub-triangle having minimum-sum
