@@ -31,7 +31,7 @@ ZooKeeper使用了类似于方式2的做法， 但是采用了更加高效的做
 #### overview
 
 ZooKeeper以类似于UNIX文件系统结构的方式来管理状态数据。不同的是，所有的数据都存在内存中，定期的在硬盘上做备份。
-![Alt text](./zknamespace.jpg)
+![RPyC](/img/zknamespace.jpg)
 
 UNIX文件系统中，每一个文件或者目录都是一个inode，而在ZooKeeper中，数据则是以ZNode的形式表示。Client通过Zookeeper提供的API，操控这些Znode。Client可以创建以下两种类型的Znode。
 1.  Regulaer：常规的Znode，客户端需要显式的创建和删除node。
@@ -67,7 +67,7 @@ Zookeeper并不适用handler来记录连接，每次都使用full path来访问z
 
 ### ZooKeeper Implementation
 
-![Alt text](./zkcomponents.jpg)
+![RPyC](/img/zkcomponents.jpg)
 
 上图是ZooKeeper的基本结构。当请求到达时，由Request processor进行处理。Request Processor将write请求转发到leader上，而read请求则由client所连接的server自行处理。
 Replicated Database用于存储Zookeeper保存的数据，是一个in-memory数据库。write操作在写入到数据库前会在写到disk上。
