@@ -6,7 +6,7 @@ category: Notes
 
 ## ZooKeeper学习笔记
 
-[ZooKeeper: Wait-free coordination for Internet-scale systems]()
+[ZooKeeper: Wait-free coordination for Internet-scale systems](https://github.com/boylinshan/boylinshan.github.io/blob/master/pages/Zookeeper.pdf)
 
 ### Introduction
 

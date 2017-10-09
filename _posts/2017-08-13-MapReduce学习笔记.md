@@ -5,6 +5,7 @@ category: Notes
 ---
 
 # MapReduce学习笔记
+[MapReduce: Simplified Data Processing on Large Clusters](https://github.com/boylinshan/boylinshan.github.io/blob/master/pages/mapreduce.pdf)
 
 ##  Introduction
 

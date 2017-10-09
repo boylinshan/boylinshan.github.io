@@ -6,6 +6,8 @@ category: Notes
 
 # Google File System
 
+[The Google File System](https://github.com/boylinshan/boylinshan.github.io/blob/master/pages/gfs.pdf)
+
 ## INTRODUCTION
 
 GFS(Goole File System) 是谷歌设计并实现的一个大规模分布式文件系统，用于支持分布式应用的数据存储需求。
